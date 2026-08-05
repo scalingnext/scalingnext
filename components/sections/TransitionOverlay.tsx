@@ -26,7 +26,7 @@ export function TransitionOverlay() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: SCROLL_WINDOW,
+    offset: [...SCROLL_WINDOW],
   });
 
   // Everything below is held still until scroll progress reaches START_AT,

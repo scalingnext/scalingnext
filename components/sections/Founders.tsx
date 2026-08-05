@@ -21,7 +21,7 @@ export function Founders() {
   const imageRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: imageRef,
-    offset: SCROLL_WINDOW,
+    offset: [...SCROLL_WINDOW],
   });
 
   // Smooth, continuous zoom across the whole window — no gate, no snapping.
