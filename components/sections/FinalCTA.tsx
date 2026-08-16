@@ -1,44 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Rocket, FileCheck, Layers, Users } from "lucide-react";
+import { Rocket, FileCheck, Lightbulb, Users } from "lucide-react";
 import { FlowButton } from "@/components/ui/flow-button";
-
-function HandshakeIcon({ size = 28 }: { size?: number }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      width={size}
-      height={size}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M11 17l1.5 1.5a2 2 0 0 0 2.8 0l.7-.7a2 2 0 0 1 2.8 0l1.4 1.4a2 2 0 0 1-2.8 2.8l-1.4-1.4" />
-      <path d="M14 14l1.5-1.5a2 2 0 0 0 0-2.8l-.7-.7a2 2 0 0 1 0-2.8l1.4-1.4a2 2 0 0 1 2.8 0l1.4 1.4a2 2 0 0 1 0 2.8L19 10.4" />
-      <path d="M3 12l3-3 3 3-3 3z" />
-      <path d="M21 12l-3-3-3 3 3 3z" />
-    </svg>
-  );
-}
 
 const capabilities = [
   {
-    Icon: Layers,
-    title: "Master AI Content with 7 detailed modules",
-    body: "Go from absolute beginner to producing monetizable AI videos in 8 weeks.",
+    Icon: Lightbulb,
+    title: "Practical insights",
+    body: "Tips, workflows, and ideas you can apply the same day you read them.",
   },
   {
     Icon: FileCheck,
-    title: "Learn by Doing, Not Watching",
-    body: "Every module ends with a shipped project — portfolio-ready from day one.",
+    title: "Curated resources",
+    body: "Guides, templates, and tools — filtered down to what's actually useful.",
   },
   {
     Icon: Users,
-    title: "Lifetime Access with All Future Updates",
-    body: "Pay once, keep access forever — including all new tools and modules we ship.",
+    title: "A community that shares",
+    body: "Discussions, discoveries, and live sessions with people exploring AI too.",
   },
 ];
 
@@ -60,7 +40,7 @@ export function FinalCTA() {
         }}
       />
 
-      {/* 1. Floating Icons */}
+      {/* Floating icons */}
       <motion.span animate={{ y: [0, -15, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute top-16 left-12 hidden md:block text-brand-orange/80 z-20">
         <FileCheck size={32} strokeWidth={1.5}/>
       </motion.span>
@@ -77,12 +57,8 @@ export function FinalCTA() {
 
       <div className="relative z-10 flex flex-col items-center w-full">
         <span className="inline-flex items-center gap-1.5 bg-white border border-light-subtle text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full text-light-primary">
-          <div className="flex -space-x-1.5 mr-1 flex-shrink-0">
-            <img className="h-4 w-4 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80" alt="Student" />
-            <img className="h-4 w-4 rounded-full border border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=80" alt="Student" />
-          </div>
           <span className="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse flex-shrink-0" />
-          <span>Registrations Ongoing!</span>
+          <span>Free to join · Open to everyone</span>
         </span>
 
         <motion.h2
@@ -92,33 +68,16 @@ export function FinalCTA() {
           transition={{ type: "spring", stiffness: 90, damping: 22 }}
           className="text-3xl md:text-5xl font-extrabold text-light-primary tracking-tight max-w-2xl leading-tight my-4"
         >
-          Join India&apos;s Biggest AI Community
+          Stay ahead of what&apos;s next.
         </motion.h2>
 
         <p className="text-base text-light-muted max-w-md mb-8">
-          Members report promotions, raises, or new opportunities within 3
-          months.
+          Join ScalingNext for practical AI insights, useful tools, important
+          updates, and live sessions — completely free.
         </p>
 
-        {/* 2. Button and Annotation */}
         <div className="relative inline-block mt-8">
-          <FlowButton
-            onClick={() => {
-              document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            text="starting from ₹9999"
-            variant="light"
-          />
-          
-          {/* Annotation positioned OUTSIDE the button */}
-          <div className="absolute -top-10 -right-56 hidden md:flex flex-col items-start gap-1 rotate-[4deg] z-20 w-64">
-            <span className="font-handwritten text-brand-orange text-lg tracking-wide font-bold">
-              500+ PROFESSIONALS ARE ALREADY AHEAD OF YOU
-            </span>
-            <svg viewBox="0 0 60 30" className="w-10 h-10 text-brand-orange ml-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M5 5 Q 30 15 50 25 M 45 20 L 50 25 L 42 28" />
-            </svg>
-          </div>
+          <FlowButton href="https://chat.whatsapp.com/CKzAuoLtl8w8jzeTWyBWU6" text="Join ScalingNext" variant="light" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-12 md:mt-16 max-w-4xl w-full text-left pt-8 border-t border-light-subtle">

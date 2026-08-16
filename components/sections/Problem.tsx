@@ -4,43 +4,37 @@ import { useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import {
   Sparkles,
-  DollarSign,
-  Briefcase,
-  Smartphone,
+  Boxes,
+  Newspaper,
+  GraduationCap,
   Clock,
   AlertTriangle,
 } from "lucide-react";
 
 const cards = [
   {
-    Icon: Sparkles,
-    title:
-      "You've watched dozens of AI videos but never made a single rupee from it.",
+    Icon: Boxes,
+    title: "Too many tools. New ones launch every single week.",
   },
   {
-    Icon: DollarSign,
-    title:
-      "You know Kling, Veo3, Midjourney exist — but can't create professional content with them.",
+    Icon: Newspaper,
+    title: "Too many updates. By the time you read them, they're old.",
   },
   {
-    Icon: Briefcase,
-    title:
-      "You want to freelance or build an agency but don't know where to start.",
-  },
-  {
-    Icon: Smartphone,
-    title:
-      "AI influencer pages are blowing up and you wonder how they do it.",
+    Icon: GraduationCap,
+    title: "Too many tutorials. Most of them are noise.",
   },
   {
     Icon: Clock,
-    title:
-      "You're spending hours on content a smart AI workflow could make in minutes.",
+    title: "You're spending hours searching for what actually matters.",
   },
   {
     Icon: AlertTriangle,
-    title:
-      "You're worried the longer you wait, the smaller the opportunity gets.",
+    title: "AI is moving fast — and you don't want to fall behind.",
+  },
+  {
+    Icon: Sparkles,
+    title: "You want things you can actually use, not more hype.",
   },
 ];
 
@@ -130,7 +124,7 @@ function TiltCard({
 
 /* ── Section ── */
 
-export function PainPoints() {
+export function Problem() {
   return (
     <section className="py-20 px-4 max-w-6xl mx-auto flex flex-col items-center">
       <div className="relative flex flex-col items-center">
@@ -140,7 +134,7 @@ export function PainPoints() {
         <div className="relative">
           <h2 className="text-3xl md:text-5xl font-extrabold text-light-primary text-center max-w-3xl leading-tight">
             <span className="bg-gradient-to-r from-black to-brand-orange bg-clip-text text-transparent">
-              You Know AI Is the Opportunity. <br />
+              You Know AI Is Changing Fast. <br />
               You Just Don&apos;t Know Where To Start.
             </span>
           </h2>
@@ -189,6 +183,17 @@ export function PainPoints() {
           </motion.div>
         ))}
       </div>
+
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        className="mt-12 text-base md:text-lg text-light-muted text-center max-w-2xl"
+      >
+        ScalingNext filters that noise into useful information you can actually
+        understand and use.
+      </motion.p>
     </section>
   );
 }

@@ -1,15 +1,15 @@
 import { Nav } from "@/components/sections/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { TransitionOverlay } from "@/components/sections/TransitionOverlay";
-import { PainPoints } from "@/components/sections/PainPoints";
-import { GenAIRocket } from "@/components/sections/GenAIRocket";
-import { Curriculum } from "@/components/sections/Curriculum";
+import { Problem } from "@/components/sections/Problem";
+import { WhatIs } from "@/components/sections/WhatIs";
+import { Inside } from "@/components/sections/Inside";
 import { ToolsMarquee } from "@/components/sections/ToolsMarquee";
-import { Pricing } from "@/components/sections/Pricing";
+import { Signal } from "@/components/sections/Signal";
 import { FAQ } from "@/components/sections/FAQ";
-import { Testimonials } from "@/components/sections/Testimonials";
-import { Founders } from "@/components/sections/Founders";
-import { AudienceFit } from "@/components/sections/AudienceFit";
+import { Community } from "@/components/sections/Community";
+import { Webinars } from "@/components/sections/Webinars";
+import { WhyScalingNext } from "@/components/sections/WhyScalingNext";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/sections/Footer";
 
@@ -19,15 +19,15 @@ export default function Home() {
       <Nav />
       <Hero />
       <TransitionOverlay />
-      <PainPoints />
-      <GenAIRocket />
-      <Curriculum />
+      <Problem />
+      <WhatIs />
+      <Inside />
       <ToolsMarquee />
-      <Pricing />
+      <Signal />
       <FAQ />
-      <Testimonials />
-      <Founders />
-      <AudienceFit />
+      <Community />
+      <Webinars />
+      <WhyScalingNext />
       <FinalCTA />
       <Footer />
     </main>

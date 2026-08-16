@@ -72,7 +72,7 @@ export function TransitionOverlay() {
         />
         <div className="absolute inset-0 flex items-center justify-center px-6 md:px-8 z-10">
           <p className="text-center text-dark-muted text-xs uppercase tracking-widest">
-            Conversion collage · student results
+            Less noise · More signal
           </p>
         </div>
       </motion.div>

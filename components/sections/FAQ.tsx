@@ -6,57 +6,59 @@ import { FlowButton } from "@/components/ui/flow-button";
 const faqs: AccordionItem[] = [
   {
     id: "q1",
-    title: "Do I need any prior experience with AI tools?",
-    content:
-      "No. We start from the basics. Whether you've never touched an AI tool or you've been experimenting for months, the curriculum meets you where you are.",
+    title: "Is ScalingNext free?",
+    content: "Yes. Joining the community is completely free.",
   },
   {
     id: "q2",
-    title: "How much time do I need to invest each week?",
+    title: "What do I get inside?",
     content:
-      "5-7 hours per week is ideal, but even 3-4 hours of focused work can deliver results. Some members landed their first clients within month one.",
+      "AI tips, tools, news, resources, webinars, and community discussions.",
   },
   {
     id: "q3",
-    title: "What AI tools will I learn?",
-    content:
-      "You'll master Midjourney, FLUX, Veo3, Kling, Runway, ElevenLabs, HeyGen, and ChatGPT, along with advanced workflow stitching.",
+    title: "Who is ScalingNext for?",
+    content: "Anyone interested in learning and keeping up with AI.",
   },
   {
     id: "q4",
-    title: "Can I actually make money from this?",
+    title: "Do I need technical knowledge?",
     content:
-      "Yes. Members land freelance gigs, sell AI-generated ads to brands, grow monetized theme pages, and offer content creation services.",
+      "No. ScalingNext should be useful whether you're just getting started or already using AI regularly.",
   },
   {
     id: "q5",
-    title: "What's the difference between Course & Community?",
+    title: "Are there live sessions?",
     content:
-      "The Course gives you self-paced modules. The Community tier adds weekly live sessions, job board access, group portfolio reviews, and collaborative challenges.",
+      "Yes. ScalingNext will host webinars and community sessions around useful AI topics.",
   },
   {
     id: "q6",
-    title: "Can I upgrade from course to community or master?",
-    content:
-      "Yes, you can upgrade at any time. You will only pay the prorated difference between the tiers.",
-  },
-  {
-    id: "q7",
-    title: "What's the duration of this course?",
-    content:
-      "The core curriculum is structured as a self-paced 8-week roadmap, but you get lifetime access so you can learn at your own speed.",
-  },
-  {
-    id: "q8",
-    title: "Is this live classes or recorded content?",
-    content:
-      "It is a hybrid. The core modules are pre-recorded for high-production quality and lifetime reference, supplemented by weekly live Q&A sessions, workshops, and community events.",
+    title: "Is ScalingNext a course?",
+    content: "No. It's a free AI content and learning community.",
   },
 ];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.title,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.content,
+    },
+  })),
+};
 
 export function FAQ() {
   return (
     <section id="faqs" className="bg-dark-core py-24 px-4 relative overflow-hidden text-white z-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="absolute inset-0 opacity-15 pointer-events-none -z-10" style={{ backgroundImage: 'linear-gradient(to right, #262626 1px, transparent 1px)', backgroundSize: '80px 100%' }} />
 
       <div className="max-w-4xl mx-auto relative z-10">

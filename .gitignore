@@ -13,3 +13,9 @@ dist/
 .vercel
 *.tsbuildinfo
 next-env.d.ts
+
+# Temporary / editor directories
+.freebuff/
+.tmp/
+.zcode/
+

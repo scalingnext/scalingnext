@@ -1,13 +1,21 @@
-import { Youtube, Linkedin, Instagram } from "lucide-react";
+import { Youtube, Twitter, Instagram } from "lucide-react";
 
 const linkCols = [
   {
-    title: "Links",
-    links: ["Curriculum", "Pricing", "Testimonials", "FAQs", "Contact us"],
+    title: "Community",
+    links: [
+      { label: "Community", href: "#community" },
+      { label: "Webinars", href: "#webinars" },
+      { label: "Resources", href: "#resources" },
+      { label: "About", href: "#about" },
+    ],
   },
   {
     title: "Others",
-    links: ["Terms Of Service", "Privacy Policy", "Refund Policy"],
+    links: [
+      { label: "FAQs", href: "#faqs" },
+      { label: "Contact", href: "#contact" },
+    ],
   },
 ];
 
@@ -16,31 +24,42 @@ export function Footer() {
     <footer className="bg-[#F1F1F1] pt-16 pb-8 px-6 border-t border-light-subtle font-sans text-light-primary">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 max-w-6xl mx-auto text-left items-start pb-12 border-b border-gray-300/50">
         <div className="space-y-4">
-          <h3 className="text-2xl font-extrabold tracking-tight">
-            GROWTH ROCKET AI
-          </h3>
+          <div className="flex items-center gap-2.5">
+            <img
+              src="/logo.png"
+              alt="ScalingNext Logo"
+              className="w-8 h-8 rounded-lg object-contain"
+            />
+            <h3 className="text-2xl font-extrabold tracking-tight">
+              ScalingNext
+            </h3>
+          </div>
           <p className="text-sm text-light-muted max-w-xs">
-            Master AI content creation and build your AI business.
+            A free community for staying ahead in AI.
           </p>
           <div className="flex items-center gap-3">
             <a
               href="#"
               aria-label="YouTube"
-              className="h-11 w-11 md:h-9 md:w-9 rounded-full border border-light-subtle bg-white flex items-center justify-center hover:text-brand-orange"
+              className="h-11 w-11 md:h-9 md:w-9 rounded-full border border-light-subtle bg-white flex items-center justify-center hover:text-brand-orange transition-colors"
             >
               <Youtube size={16} />
             </a>
             <a
-              href="#"
-              aria-label="LinkedIn"
-              className="h-11 w-11 md:h-9 md:w-9 rounded-full border border-light-subtle bg-white flex items-center justify-center hover:text-brand-orange"
+              href="https://x.com/scalingnext"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (formerly Twitter)"
+              className="h-11 w-11 md:h-9 md:w-9 rounded-full border border-light-subtle bg-white flex items-center justify-center hover:text-brand-orange transition-colors"
             >
-              <Linkedin size={16} />
+              <Twitter size={16} />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/scalingnext"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
-              className="h-11 w-11 md:h-9 md:w-9 rounded-full border border-light-subtle bg-white flex items-center justify-center hover:text-brand-orange"
+              className="h-11 w-11 md:h-9 md:w-9 rounded-full border border-light-subtle bg-white flex items-center justify-center hover:text-brand-orange transition-colors"
             >
               <Instagram size={16} />
             </a>
@@ -54,9 +73,9 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-light-muted">
               {col.links.map((l) => (
-                <li key={l}>
-                  <a href="#" className="inline-flex items-center min-h-[40px] md:min-h-0 hover:text-brand-orange transition-colors">
-                    {l}
+                <li key={l.label}>
+                  <a href={l.href} className="inline-flex items-center min-h-[40px] md:min-h-0 hover:text-brand-orange transition-colors">
+                    {l.label}
                   </a>
                 </li>
               ))}
@@ -71,23 +90,17 @@ export function Footer() {
             </h4>
           </div>
           <div>
-            <p className="text-sm font-bold text-light-primary">
-              team@ayushmanpandita.com
+            <p className="text-sm text-light-muted">
+              Questions, ideas, or feedback? Reach out through the contact
+              section above.
             </p>
-            <p className="text-xs text-light-muted">For all your questions</p>
-          </div>
-          <div>
-            <p className="text-sm font-bold text-light-primary">
-              +91 97605 98284
-            </p>
-            <p className="text-xs text-light-muted">Call or Whatsapp</p>
           </div>
         </div>
       </div>
 
       <div className="max-w-6xl mx-auto pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-light-muted gap-4">
-        <p>Legal Name - Ayushman Pandita</p>
-        <p>© 2026 Mindly. All Rights Reserved.</p>
+        <p>ScalingNext — a free AI community</p>
+        <p>© 2026 ScalingNext. All Rights Reserved.</p>
       </div>
     </footer>
   );

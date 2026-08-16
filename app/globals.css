@@ -192,11 +192,12 @@ html {
   /* Blinking caret for the Hero prompt typewriter */
   .typing-cursor {
     display: inline-block;
-    width: 2px;
+    width: 1.5px;
+    height: 1.15em;
     margin-left: 2px;
-    background: var(--brand-orange);
+    background: rgba(255, 255, 255, 0.85);
+    vertical-align: -0.15em;
     animation: blink 1s step-end infinite;
-    align-self: stretch;
   }
 
   /* Reusable scroll-reveal: lightweight CSS-only fade-up.

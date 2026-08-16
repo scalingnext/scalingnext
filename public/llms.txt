@@ -1,0 +1,26 @@
+# ScalingNext (https://scalingnext.in)
+
+> ScalingNext is a free AI content community focused on helping people stay ahead in the AI era. The community provides practical AI tips and tricks, useful tools, workflows, news updates, tutorials, resources, and live interactive webinars.
+
+## Key Content Pillars & Capabilities
+
+- **AI Tools**: Curated, honest breakdowns of useful AI tools, platforms, and models worth trying (Claude 3.7, Cursor, ChatGPT, Perplexity, ComfyUI, Ollama, Hugging Face).
+- **AI Workflows**: Practical, step-by-step automation blueprints and agentic systems you can copy into daily work.
+- **AI Tips & Prompts**: Structured prompt engineering techniques ([Role] + [Context] + [Constraints] + [Format]) and real-world use cases.
+- **AI Updates & News**: Filtered, fluff-free weekly digests of major model releases, context window expansions, and industry shifts.
+- **Resources & Guides**: Curated libraries, PDF cheatsheets, and prompt vaults.
+- **Webinars & Community**: Free live interactive sessions, community discussions, and real-time discoveries on WhatsApp and social channels.
+
+## Official Channels
+
+- **Website**: https://scalingnext.in
+- **WhatsApp Community**: https://chat.whatsapp.com/CKzAuoLtl8w8jzeTWyBWU6
+- **X (Twitter)**: https://x.com/scalingnext
+- **Instagram**: https://www.instagram.com/scalingnext
+
+## Principles
+
+1. **Practical**: Less theory. More things you can actually use.
+2. **Curated**: Useful signal without endless doom-scrolling.
+3. **Current**: Kept fresh as frontier AI models evolve.
+4. **Free**: 100% open to everyone with zero paywalls.

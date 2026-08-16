@@ -1,6 +1,8 @@
-# Growth Rocket AI — Landing Page
+# ScalingNext — Landing Page
 
-A pixel-perfect, type-safe Next.js 14 (App Router) + Tailwind + Framer Motion landing page.
+A premium, type-safe Next.js 14 (App Router) + Tailwind + Framer Motion landing
+page for ScalingNext — a free AI content community for staying ahead in the AI
+era.
 
 ## Stack
 - Next.js 14 (App Router)
@@ -27,7 +29,7 @@ Push to a Git provider and import the repo in Vercel — zero config required.
 ## Structure
 - `app/` — App Router entry (layout, page, globals)
 - `components/sections/` — One file per landing section
-- `components/ui/` — Reusable primitives (Button, Badge, Marquee, Accordion)
+- `components/ui/` — Reusable primitives (FlowButton, Marquee, Accordion, KineticGrid)
 - `lib/utils.ts` — `cn` helper
 
 ## Design Tokens

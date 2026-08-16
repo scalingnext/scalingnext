@@ -6,11 +6,10 @@ import { Menu, X } from "lucide-react";
 import { FlowButton } from "@/components/ui/flow-button";
 
 const links = [
-  { label: "Curriculum", href: "#curriculum" },
-  { label: "Reviews", href: "#testimonials" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQs", href: "#faqs" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Community", href: "#community" },
+  { label: "Resources", href: "#resources" },
+  { label: "Webinars", href: "#webinars" },
+  { label: "About", href: "#about" },
 ];
 
 export function Nav() {
@@ -37,16 +36,17 @@ export function Nav() {
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="w-full bg-white/95 backdrop-blur rounded-full border border-gray-200/50 flex items-center justify-between px-6"
       >
-        <a href="#top" className="flex items-center gap-2 group">
-          <motion.span
-            whileHover={{ rotate: 8, scale: 1.05 }}
+        <a href="#top" className="flex items-center gap-2.5 group">
+          <motion.img
+            src="/logo.png"
+            alt="ScalingNext Logo"
+            whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300, damping: 18 }}
-            className="w-8 h-8 flex items-center justify-center bg-brand-orange rounded-xl shadow-md shadow-brand-orange/30 group-hover:shadow-brand-orange/50"
-          >
-            <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
-              <path d="M4 4l16 8-16 8V4z" fill="#fff" />
-            </svg>
-          </motion.span>
+            className="w-8 h-8 rounded-lg object-contain"
+          />
+          <span className="text-base font-extrabold tracking-tight text-light-primary">
+            ScalingNext
+          </span>
         </a>
 
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-light-primary">
@@ -58,7 +58,7 @@ export function Nav() {
         </nav>
 
         <div className="hidden md:flex items-center">
-          <FlowButton href="#pricing" text="starting from ₹9999" variant="light" />
+          <FlowButton href="https://chat.whatsapp.com/CKzAuoLtl8w8jzeTWyBWU6" text="Join Free" variant="light" />
         </div>
 
         <button
@@ -91,7 +91,7 @@ export function Nav() {
               </a>
             ))}
             <div onClick={() => setOpen(false)} className="w-full flex justify-center">
-              <FlowButton href="#pricing" text="starting from ₹9999" variant="light" className="w-full justify-center" />
+              <FlowButton href="https://chat.whatsapp.com/CKzAuoLtl8w8jzeTWyBWU6" text="Join Free" variant="light" className="w-full justify-center" />
             </div>
           </motion.div>
         )}
