@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Caveat } from "next/font/google";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -52,6 +53,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  manifest: "/manifest.webmanifest",
   alternates: {
     canonical: "/",
   },
@@ -164,7 +166,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <GoogleAnalytics />
+      </body>
     </html>
   );
 }
