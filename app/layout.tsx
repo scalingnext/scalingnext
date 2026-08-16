@@ -54,6 +54,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   manifest: "/manifest.webmanifest",
+  verification: {
+    google: "3Xiv23R9rU9lTQ3CDGeQdKxyjT6V4id-OUCZqaOnOQ8",
+  },
   alternates: {
     canonical: "/",
   },
