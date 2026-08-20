@@ -4,8 +4,11 @@ out/
 build/
 dist/
 
-.env*.local
-.env
+# Any local env file. `.env.example` is the one intentional exception — this
+# pattern also catches typos like `.env.exmple`, which is how a real
+# service-role key nearly got committed.
+.env*
+!.env.example
 
 .DS_Store
 *.log
@@ -18,4 +21,4 @@ next-env.d.ts
 .freebuff/
 .tmp/
 .zcode/
-
+.omc/

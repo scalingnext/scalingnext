@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Caveat } from "next/font/google";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { Tracker } from "@/components/analytics/Tracker";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -172,6 +173,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         {children}
         <GoogleAnalytics />
+        <Tracker />
       </body>
     </html>
   );
