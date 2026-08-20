@@ -1,15 +1,13 @@
 import Script from 'next/script';
 
-export function GoogleAnalytics({ gaId }: { gaId?: string }) {
-  const id = gaId || process.env.NEXT_PUBLIC_GA_ID;
+const GA_MEASUREMENT_ID = 'G-QLXJ3B1L17';
 
-  if (!id) return null;
-
+export function GoogleAnalytics() {
   return (
     <>
       <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
       />
       <Script
         id="google-analytics"
@@ -19,9 +17,7 @@ export function GoogleAnalytics({ gaId }: { gaId?: string }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${id}', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', '${GA_MEASUREMENT_ID}');
           `,
         }}
       />
