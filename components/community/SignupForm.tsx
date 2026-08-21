@@ -8,7 +8,7 @@
  */
 
 import { useEffect, useRef, useState } from "react";
-import { Loader2, Lock, ArrowRight, Check } from "lucide-react";
+import { Loader2, Lock, ArrowRight, Check, Mail, AlertCircle } from "lucide-react";
 import {
   validateLead,
   ROLES,
@@ -18,7 +18,7 @@ import {
 } from "@/lib/validation/lead";
 import { COUNTRIES, DEFAULT_COUNTRY, detectCountry, findByName } from "@/lib/countries";
 import { FloatingSelect, type SelectOption } from "@/components/ui/FloatingSelect";
-import type { ChannelConfig } from "./channels";
+import { WHATSAPP_INVITE_URL, type ChannelConfig } from "./channels";
 
 const FIELD =
   "w-full rounded-xl bg-[#0F0F0F] border border-[#2A2A2A] px-4 py-3 text-[15px] text-white " +
@@ -145,7 +145,7 @@ export function SignupForm({ channel }: { channel: ChannelConfig }) {
   }
 
   if (status === "success") {
-    return <SuccessPanel />;
+    return <SuccessPanel email={values.email.trim().toLowerCase()} />;
   }
 
   const submitting = status === "submitting";
@@ -382,7 +382,7 @@ function FieldError({ id, children }: { id: string; children: React.ReactNode })
   );
 }
 
-function SuccessPanel() {
+function SuccessPanel({ email }: { email: string }) {
   return (
     <div className="rounded-[22px] border border-[#232323] bg-[#131313] p-8 text-center sm:p-10">
       <span className="mx-auto mb-5 flex h-11 w-11 items-center justify-center rounded-full border border-[#2E2E2E] bg-[#1C1C1C]">
@@ -390,15 +390,49 @@ function SuccessPanel() {
       </span>
       <h2 className="text-[26px] font-bold tracking-tight text-white sm:text-[28px]">You&apos;re in.</h2>
       <p className="mt-3 text-[15px] text-[#B0B0B0]">Welcome to ScalingNext.</p>
-      <p className="mx-auto mt-2 max-w-[380px] text-[14px] leading-relaxed text-[#8A8A8A]">
-        We&apos;ll send the latest AI updates, tools, and community opportunities to your inbox.
-      </p>
+
+      {/* The join link lives in the email, so this has to be the loudest thing
+          on the panel — otherwise people sit here waiting for something to
+          happen and never find the invite. */}
+      <div className="mt-6 rounded-xl border border-[#2A2A2A] bg-[#0F0F0F] p-5 text-left">
+        <div className="flex items-start gap-3">
+          <Mail size={17} className="mt-0.5 shrink-0 text-white" strokeWidth={1.8} />
+          <div>
+            <p className="text-[14px] font-semibold text-white">
+              Check your inbox for the joining link
+            </p>
+            <p className="mt-1.5 break-all text-[13px] leading-relaxed text-[#9A9A9A]">
+              We just sent it to <span className="font-medium text-[#D4D4D4]">{email}</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-4 flex items-start gap-3 rounded-lg border border-[#3A2E1C] bg-[#1A1509] p-3.5">
+          <AlertCircle size={15} className="mt-0.5 shrink-0 text-[#E0A94A]" strokeWidth={2} />
+          <p className="text-[12.5px] leading-relaxed text-[#C9A870]">
+            <span className="font-semibold text-[#E0B968]">Not there?</span> Check your{" "}
+            <span className="font-semibold text-[#E0B968]">spam</span> or{" "}
+            <span className="font-semibold text-[#E0B968]">promotions</span> folder — it often
+            lands there the first time. Mark it &ldquo;Not spam&rdquo; so you get future updates.
+          </p>
+        </div>
+      </div>
+
+      <a
+        href={WHATSAPP_INVITE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-[15px] text-[15px] font-semibold text-[#111111] transition-colors duration-200 hover:bg-[#EDEDED]"
+      >
+        Or join the community now
+        <ArrowRight size={16} />
+      </a>
+
       <a
         href="/"
-        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-[15px] text-[15px] font-semibold text-[#111111] transition-colors duration-200 hover:bg-[#EDEDED]"
+        className="mt-3 inline-flex w-full items-center justify-center rounded-xl border border-[#2A2A2A] px-6 py-[13px] text-[14px] font-medium text-[#9A9A9A] transition-colors duration-200 hover:border-[#3A3A3A] hover:text-white"
       >
         Back to ScalingNext
-        <ArrowRight size={16} />
       </a>
     </div>
   );

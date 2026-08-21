@@ -65,5 +65,15 @@ export async function sendMail(payload: MailPayload): Promise<void> {
     // scoring versus an HTML-only message.
     text: payload.text,
     html: payload.html,
+    headers: {
+      // Gmail and Outlook weigh a machine-readable unsubscribe path heavily when
+      // scoring bulk-looking mail. mailto: is honest here — it reaches a real
+      // monitored inbox, unlike an unsubscribe URL we have not built yet.
+      "List-Unsubscribe": `<mailto:${user}?subject=unsubscribe>`,
+      "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      // Marks this as triggered by a user action rather than a campaign blast.
+      "X-Entity-Ref-ID": "scalingnext-community-signup",
+      "Auto-Submitted": "auto-generated",
+    },
   });
 }
