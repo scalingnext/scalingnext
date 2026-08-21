@@ -389,7 +389,9 @@ function SuccessPanel({ email }: { email: string }) {
         <Check size={18} className="text-white" strokeWidth={2.5} />
       </span>
       <h2 className="text-[26px] font-bold tracking-tight text-white sm:text-[28px]">You&apos;re in.</h2>
-      <p className="mt-3 text-[15px] text-[#B0B0B0]">Welcome to ScalingNext.</p>
+      <p className="mt-3 text-[15px] text-[#B0B0B0]">
+        Welcome to Scaling<span className="text-brand-orange">Next</span>.
+      </p>
 
       {/* The join link lives in the email, so this has to be the loudest thing
           on the panel — otherwise people sit here waiting for something to

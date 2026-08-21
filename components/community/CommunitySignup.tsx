@@ -63,7 +63,7 @@ export function CommunitySignup({ channel }: { channel: ChannelConfig }) {
               href="/"
               className="text-[15px] font-semibold tracking-tight text-white transition-opacity duration-200 hover:opacity-80"
             >
-              ScalingNext
+              Scaling<span className="text-brand-orange">Next</span>
             </a>
             <a
               href="#join"
@@ -82,7 +82,7 @@ export function CommunitySignup({ channel }: { channel: ChannelConfig }) {
           </span>
 
           <h1 className="mt-7 text-[42px] font-bold leading-[1.05] tracking-[-0.03em] text-white sm:text-[54px]">
-            ScalingNext
+            Scaling<span className="text-brand-orange">Next</span>
           </h1>
 
           <p className="mt-4 text-[19px] font-medium tracking-[-0.01em] text-[#D4D4D4] sm:text-[21px]">
@@ -111,7 +111,9 @@ export function CommunitySignup({ channel }: { channel: ChannelConfig }) {
               className="h-9 w-9 rounded-full border border-[#262626] bg-[#141414] object-contain p-1"
             />
             <div className="text-left">
-              <p className="text-[13.5px] font-semibold leading-tight text-[#E8E8E8]">ScalingNext</p>
+              <p className="text-[13.5px] font-semibold leading-tight text-[#E8E8E8]">
+                Scaling<span className="text-brand-orange">Next</span>
+              </p>
               <p className="mt-0.5 text-[12px] leading-tight text-[#757575]">
                 AI community for people building with AI
               </p>
@@ -151,7 +153,9 @@ export function CommunitySignup({ channel }: { channel: ChannelConfig }) {
         {/* ── Footer ────────────────────────────────────────────────────── */}
         <footer className="mt-20 pb-14 text-center sm:mt-24 sm:pb-16">
           <p className="text-[12.5px] text-[#6B6B6B]">We respect your privacy. No spam, ever.</p>
-          <p className="mt-2.5 text-[12.5px] text-[#4F4F4F]">ScalingNext © 2026</p>
+          <p className="mt-2.5 text-[12.5px] text-[#4F4F4F]">
+            Scaling<span className="text-brand-orange">Next</span> © 2026
+          </p>
         </footer>
       </div>
     </div>
