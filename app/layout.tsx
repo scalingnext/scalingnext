@@ -115,6 +115,15 @@ const jsonLd = {
       "@type": "Organization",
       "@id": "https://scalingnext.in/#organization",
       "name": "ScalingNext",
+      // The exact brand variants people search for. Declaring them explicitly
+      // helps Google resolve all of them to one entity rather than treating
+      // them as unrelated strings. Every one is a real name for this brand.
+      "alternateName": [
+        "ScalingNext AI",
+        "ScalingNext Community",
+        "ScalingNext AI Community",
+        "Scaling Next"
+      ],
       "url": "https://scalingnext.in",
       "logo": {
         "@type": "ImageObject",
@@ -123,6 +132,19 @@ const jsonLd = {
         "contentUrl": "https://scalingnext.in/logo.png",
         "caption": "ScalingNext Logo"
       },
+      // Topics this entity genuinely covers — mirrors the six pillars shown on
+      // the homepage and /about. Not a keyword list; anything not actually
+      // covered is left out.
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "AI Tools",
+        "Generative AI",
+        "Prompt Engineering",
+        "AI Workflows",
+        "AI Agents",
+        "AI Automation",
+        "AI Learning Resources"
+      ],
       "sameAs": [
         "https://x.com/scalingnext",
         "https://www.instagram.com/scalingnext"

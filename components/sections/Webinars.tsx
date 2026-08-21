@@ -113,23 +113,44 @@ export function Webinars() {
         </div>
       </div>
 
-      {/* Full-bleed image: fills the width of the section, bottom flush with
-          the section edge so it runs straight into the next one. */}
+      {/* Full-bleed backdrop: fills the width of the section, bottom flush with
+          the section edge so it runs straight into the next one.
+
+          Drawn entirely in CSS rather than loaded from a URL. The previous
+          version pulled a stock photo from images.unsplash.com — a third-party
+          dependency on a page we do not control, and one that would leave a
+          hole in the layout if it ever 404'd or got rate-limited. */}
       <div
         ref={imageRef}
-        className="w-full mt-12 relative overflow-hidden aspect-video md:aspect-[21/9]"
+        className="w-full mt-12 relative overflow-hidden aspect-video md:aspect-[21/9] bg-[#0E0E10]"
       >
-        {/* Moving layer: taller than the window (130%) so the vertical drift
+        {/* Moving layer: taller than the window (150%) so the vertical drift
             never exposes empty space at the top or bottom. `y` is a % of this
             layer's own height, so the container needs no explicit height. */}
-        <motion.div
-          style={{ y, height: IMAGE_HEIGHT }}
-          className="w-full relative"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=2000&q=80"
-            alt="A live community session in progress"
-            className="w-full h-full object-cover"
+        <motion.div style={{ y, height: IMAGE_HEIGHT }} className="w-full relative">
+          {/* Perspective grid — reads as a room/stage receding into the dark. */}
+          <div
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px)," +
+                "linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)",
+              backgroundSize: "64px 64px",
+              maskImage: "radial-gradient(ellipse 70% 60% at 50% 45%, black, transparent 75%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse 70% 60% at 50% 45%, black, transparent 75%)",
+            }}
+          />
+          {/* Warm key light, off-centre so the composition is not symmetrical. */}
+          <div
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(ellipse 45% 55% at 38% 40%, rgba(255,80,0,0.20), transparent 70%)," +
+                "radial-gradient(ellipse 40% 50% at 72% 62%, rgba(74,158,255,0.13), transparent 70%)",
+            }}
           />
         </motion.div>
         {/* Static fade overlay — scrolls with the page, no animation. */}
