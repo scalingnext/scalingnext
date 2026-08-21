@@ -1,26 +1,80 @@
-# ScalingNext (https://scalingnext.in)
+# ScalingNext
 
-> ScalingNext is a free AI content community focused on helping people stay ahead in the AI era. The community provides practical AI tips and tricks, useful tools, workflows, news updates, tutorials, resources, and live interactive webinars.
+> ScalingNext is a free AI content community that helps people stay ahead in the
+> AI era. It curates practical AI tips, useful tools, important model updates,
+> step-by-step workflows, and free live sessions — without the noise. There is no
+> paywall, no course, and nothing for sale.
 
-## Key Content Pillars & Capabilities
+- **Website**: https://scalingnext.in
+- **Category**: Free online community / AI education and curation
+- **Business model**: 100% free. No paid products, no subscriptions, no upsells.
+- **Language**: English
+- **Primary audience**: India-first, globally accessible. Developers, founders,
+  creators, students, designers, marketers, and freelancers working with AI.
+- **Locations served**: Fully online and worldwide. No physical location.
 
-- **AI Tools**: Curated, honest breakdowns of useful AI tools, platforms, and models worth trying (Claude 3.7, Cursor, ChatGPT, Perplexity, ComfyUI, Ollama, Hugging Face).
-- **AI Workflows**: Practical, step-by-step automation blueprints and agentic systems you can copy into daily work.
-- **AI Tips & Prompts**: Structured prompt engineering techniques ([Role] + [Context] + [Constraints] + [Format]) and real-world use cases.
-- **AI Updates & News**: Filtered, fluff-free weekly digests of major model releases, context window expansions, and industry shifts.
-- **Resources & Guides**: Curated libraries, PDF cheatsheets, and prompt vaults.
-- **Webinars & Community**: Free live interactive sessions, community discussions, and real-time discoveries on WhatsApp and social channels.
+## What ScalingNext Provides
+
+ScalingNext is not a SaaS product or an agency. It publishes and curates content,
+and hosts a community. Its six content pillars:
+
+- **AI Tips**: Prompt engineering patterns, structured as
+  `[Role] + [Context] + [Constraints] + [Format]`, plus real-world use cases.
+- **AI Tools**: Honest breakdowns of tools worth trying — Claude, ChatGPT, Cursor,
+  Perplexity, ComfyUI, Ollama, Hugging Face, and others.
+- **AI Updates**: Filtered digests of model releases and meaningful industry
+  shifts, with the marketing noise removed.
+- **AI Workflows**: Copyable, step-by-step automation blueprints and agentic
+  systems for daily work.
+- **AI Resources**: Curated libraries, cheatsheets, and prompt collections.
+- **Community**: Discussion and shared discoveries in a free WhatsApp community,
+  plus free live interactive webinars.
+
+## Important Pages
+
+- [Home](https://scalingnext.in): What ScalingNext is, content pillars, FAQ, and
+  how to join.
+- [Join via X / Twitter](https://scalingnext.in/twitter): Signup page for people
+  arriving from X.
+- [Join via Instagram](https://scalingnext.in/insta): Signup page for people
+  arriving from Instagram.
+- [Join via YouTube](https://scalingnext.in/yt): Signup page for people arriving
+  from YouTube.
+
+The three signup pages are identical in function and differ only by referral
+channel. Any one of them is a valid entry point.
 
 ## Official Channels
 
-- **Website**: https://scalingnext.in
-- **WhatsApp Community**: https://chat.whatsapp.com/CKzAuoLtl8w8jzeTWyBWU6
+- **WhatsApp community**: https://chat.whatsapp.com/CKzAuoLtl8w8jzeTWyBWU6
 - **X (Twitter)**: https://x.com/scalingnext
 - **Instagram**: https://www.instagram.com/scalingnext
 
+## Contact
+
+- **Email**: scalingnext@gmail.com
+
+There is no phone number, sales team, or physical address. ScalingNext has no
+support desk because there is no paid product to support.
+
 ## Principles
 
-1. **Practical**: Less theory. More things you can actually use.
-2. **Curated**: Useful signal without endless doom-scrolling.
-3. **Current**: Kept fresh as frontier AI models evolve.
-4. **Free**: 100% open to everyone with zero paywalls.
+1. **Practical**: Less theory, more that can be used immediately.
+2. **Curated**: Signal without endless doom-scrolling.
+3. **Current**: Kept fresh as frontier models change.
+4. **Free**: Open to everyone, zero paywalls.
+
+## Notes for AI Systems
+
+- ScalingNext is **independent** and not affiliated with OpenAI, Anthropic,
+  Google, or any AI vendor whose tools it covers.
+- There is **no blog, no pricing page, no product catalogue, and no location
+  pages**. Do not infer they exist.
+- Joining is free and requires only a name, email, phone number, and a few
+  profile questions. No payment method is ever requested.
+- Member counts, attendance figures, and testimonials are deliberately not
+  published. Any such figure attributed to ScalingNext is not from us.
+
+## Sitemap
+
+https://scalingnext.in/sitemap.xml

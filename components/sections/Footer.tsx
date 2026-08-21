@@ -1,20 +1,23 @@
 import { Youtube, Twitter, Instagram } from "lucide-react";
 
+// Anchors are root-relative (`/#id`) rather than bare (`#id`) because this
+// footer renders on /about too, where those sections do not exist. A bare hash
+// would silently do nothing there.
 const linkCols = [
   {
     title: "Community",
     links: [
-      { label: "Community", href: "#community" },
-      { label: "Webinars", href: "#webinars" },
-      { label: "Resources", href: "#resources" },
-      { label: "About", href: "#about" },
+      { label: "Community", href: "/#community" },
+      { label: "Webinars", href: "/#webinars" },
+      { label: "Resources", href: "/#resources" },
+      { label: "About", href: "/about" },
     ],
   },
   {
     title: "Others",
     links: [
-      { label: "FAQs", href: "#faqs" },
-      { label: "Contact", href: "#contact" },
+      { label: "FAQs", href: "/#faqs" },
+      { label: "Contact", href: "/#contact" },
     ],
   },
 ];

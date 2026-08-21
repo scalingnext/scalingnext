@@ -1,5 +1,13 @@
 import { MetadataRoute } from 'next';
 
+/**
+ * sitemap.xml
+ *
+ * Only canonical, indexable URLs belong here. /twitter, /insta, and /yt are
+ * deliberately excluded: they carry `robots: { index: false }` because all three
+ * share the same H1 and body copy, and listing noindex URLs in a sitemap sends
+ * Google contradictory signals.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://scalingnext.in';
   const currentDate = new Date();
@@ -12,22 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/twitter`,
+      url: `${baseUrl}/about`,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/insta`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/yt`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.8,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ];
 }

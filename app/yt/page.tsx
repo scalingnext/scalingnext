@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   title: channel.metaTitle,
   description: channel.metaDescription,
   alternates: { canonical: channel.path },
+  // Social-referral landing page, not a search destination. See app/twitter/page.tsx.
+  robots: { index: false, follow: true },
   openGraph: {
     type: "website",
     url: channel.path,
