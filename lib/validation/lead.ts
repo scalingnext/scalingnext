@@ -7,7 +7,14 @@
  * same rules on every request, so a crafted payload cannot bypass them.
  */
 
-export const CHANNEL_SOURCES = ["twitter", "instagram", "youtube"] as const;
+export const CHANNEL_SOURCES = [
+  "twitter",
+  "instagram",
+  "youtube",
+  "linkedin",
+  // /join has no referring social channel — someone arrived directly.
+  "direct",
+] as const;
 export type ChannelSource = (typeof CHANNEL_SOURCES)[number];
 
 export const ROLES = [
