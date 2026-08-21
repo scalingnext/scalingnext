@@ -156,6 +156,11 @@ const jsonLd = {
       "@id": "https://scalingnext.in/#website",
       "url": "https://scalingnext.in",
       "name": "ScalingNext",
+      // Google reads WebSite.alternateName as an accepted shorthand for the
+      // site, not as a competing name. Declaring the bare domain here tells it
+      // "scalingnext.in" is the address, while "ScalingNext" is the site name —
+      // which is what should be displayed in results.
+      "alternateName": "scalingnext.in",
       "description": "Stay ahead in AI with practical tips, useful tools, and community discussions.",
       "publisher": {
         "@id": "https://scalingnext.in/#organization"
